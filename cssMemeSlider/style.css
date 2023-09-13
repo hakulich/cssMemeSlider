@@ -65,3 +65,28 @@ input[type="radio"] {
 .dot:hover {
   background-color: #acaec2;
 }
+
+.radio1:hover div:nth-child(1),
+.radio2:hover div:nth-child(1),
+.radio3:hover div:nth-child(1),
+.radio4:hover div:nth-child(1) {
+  background-color: #acaec2;
+}
+
+/*Interactivity */
+
+#slide1:checked ~ .container .slides {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ .container .slides {
+  margin-left: -34.375rem;
+}
+
+#slide3:checked ~ .container .slides {
+  margin-left: -68.75rem;
+}
+
+#slide4:checked ~ .container .slides {
+  margin-left: -103.125rem;
+}
