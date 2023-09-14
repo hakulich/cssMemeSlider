@@ -2,17 +2,17 @@ body {
   background-color: black;
 }
 
-/*Slider */
+/*Slider 31.25rem*/
 
 .slider {
-  width: 31.25rem;
+  width: 90%;
+  height: 90%;
   margin: 5% auto;
 }
 /*Slides */
 
 .slider-overflow {
   overflow: hidden;
-  width: 31.25rem;
 }
 
 .slides {
@@ -25,7 +25,13 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-top: 3%;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.slide-img {
+  width: 90vw;
+  height: 70vh;
 }
 
 /* Caption */
@@ -112,7 +118,7 @@ input[type="radio"] {
 
 /* Slide 2 */
 #slide2:checked ~ .container .slides {
-  margin-left: -34.375rem;
+  margin-left: -101%;
 }
 
 #slide2:checked ~ .slider-footer #caption1,
@@ -146,7 +152,7 @@ input[type="radio"] {
 
 /* Slide 3 */
 #slide3:checked ~ .container .slides {
-  margin-left: -68.75rem;
+  margin-left: -202%;
 }
 
 #slide3:checked ~ .slider-footer #caption1,
@@ -181,7 +187,7 @@ input[type="radio"] {
 /* Slide 4*/
 
 #slide4:checked ~ .container .slides {
-  margin-left: -103.125rem;
+  margin-left: -303%;
 }
 
 #slide4:checked ~ .slider-footer #caption1,
@@ -222,5 +228,61 @@ input[type="radio"] {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1020px) {
+  #slide2:checked ~ .container .slides {
+    margin-left: -102%;
+  }
+  #slide3:checked ~ .container .slides {
+    margin-left: -204%;
+  }
+  #slide4:checked ~ .container .slides {
+    margin-left: -305%;
+  }
+}
+
+@media (max-width: 810px) {
+  #slide2:checked ~ .container .slides {
+    margin-left: -103%;
+  }
+  #slide3:checked ~ .container .slides {
+    margin-left: -205%;
+  }
+  #slide4:checked ~ .container .slides {
+    margin-left: -307%;
+  }
+}
+
+@media (max-width: 596px) {
+  body {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3%;
+  }
+
+  .navigation {
+    align-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  #slide2:checked ~ .container .slides {
+    margin-left: -100%;
+  }
+  #slide3:checked ~ .container .slides {
+    margin-left: -200%;
+  }
+  #slide4:checked ~ .container .slides {
+    margin-left: -300%;
   }
 }
